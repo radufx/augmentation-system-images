@@ -1,0 +1,7 @@
+rotate 15
+resize 50
+pixelate 8
+flip horizontal
+increase_brightness 30
+sharpen
+grayscale
