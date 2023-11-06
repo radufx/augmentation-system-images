@@ -5,3 +5,4 @@ flip horizontal
 increase_brightness 30
 sharpen
 grayscale
+translate 20 20

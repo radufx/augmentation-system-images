@@ -48,14 +48,12 @@ class Augmentation:
         final_hsv = cv2.merge((h, s, v))
         return cv2.cvtColor(final_hsv, cv2.COLOR_HSV2BGR)
 
-    # Filtering augmentation functions
     def sharpen_image(self, image):
         kernel = np.array([[-1, -1, -1],
                            [-1, 9, -1],
                            [-1, -1, -1]])
         return cv2.filter2D(image, -1, kernel)
 
-    # low-level grayscale manipulation
     def apply_grayscale(self, image):
         image_copy = image.copy()
         height, width, _ = image.shape
@@ -67,7 +65,6 @@ class Augmentation:
                 image_copy[i, j] = [gray_value, gray_value, gray_value]
         return image_copy
 
-    # Function to apply augmentation algorithms
     def apply_augmentations(self, image, augmentations):
         images = []
 
